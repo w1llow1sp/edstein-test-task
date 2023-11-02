@@ -7,7 +7,7 @@ import { DropdownBody } from './components/DropdownBody/DropdownBody';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <DropdownCard>
         <DropdownHeader />
         <DropdownBody />

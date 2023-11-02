@@ -1,12 +1,20 @@
 {
-  "printWidth": 80,
   "tabWidth": 2,
-  "useTabs": false,
   "semi": true,
   "singleQuote": true,
-  "trailingComma": "all",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "jsxSingleQuote": true,
+  "code": 80,
+  "before": true,
+  "after": true,
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "^@core/(.*)$",
+    "^@src/(.*)$",
+    "^@components/(.*)$",
+    "^@pages/(.*)$",
+    "^@planner/(.*)$",
+    "^@api/(.*)$",
+    "^[./]"
+  ]
 }

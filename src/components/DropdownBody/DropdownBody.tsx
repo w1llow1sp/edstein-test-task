@@ -1,11 +1,6 @@
 import React from 'react';
-import styles from './DropdownBody.module.scss'
+import styles from './DropdownBody.module.scss';
 
 export const DropdownBody = () => {
-    return (
-        <div>
-            Body
-        </div>
-    );
+  return <div>Body</div>;
 };
-

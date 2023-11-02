@@ -67,7 +67,7 @@ export const languageReducer = (
       return {
         ...state,
         searchTerm: action.searchTerm,
-        languages: LANGUAGES.filter(lang =>
+        languages: LANGUAGES.filter((lang) =>
           lang.lang.toLowerCase().includes(action.searchTerm.toLowerCase()),
         ),
       };

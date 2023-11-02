@@ -1,0 +1,62 @@
+.dropdownHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    margin-bottom: 4px;
+  }
+
+  &__sectionContainer {
+    min-width: 400px;
+    min-height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--black-300, #C1C1C1);
+    background: var(--other-white, #FFF);
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__leftContainer {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 370px;
+  }
+
+  &__rightContainer {
+
+    display: flex;
+    justify-content: right;
+    flex-grow: 1;
+  }
+
+  &__button {
+    top: 8px;
+    right: 12px;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../assets/ARR.svg');
+    background-size: cover;
+    transition: transform 0.3s ease;
+
+    &__flipped {
+      transform: rotate(180deg);
+    }
+  }
+
+}

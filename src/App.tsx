@@ -2,8 +2,9 @@ import React from 'react';
 
 import './App.css';
 import { DropdownCard } from './components/UI/DropdownCard/DropdownCard';
-import DropdownHeader from './components/DropdownHeader/DropdownHeader';
+import {DropdownHeader} from './components/DropdownHeader/DropdownHeader';
 import { DropdownBody } from './components/DropdownBody/DropdownBody';
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <DropdownHeader />
         <DropdownBody />
       </DropdownCard>
+
+        <Footer/>
     </div>
   );
 }

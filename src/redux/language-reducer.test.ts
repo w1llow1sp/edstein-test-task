@@ -1,11 +1,11 @@
-import {LANGUAGES} from "../const";
+import { LANGUAGES } from '../const';
 import {
   addLanguageAC,
   languageReducer,
   removeLanguageAC,
   searchLanguagesAC,
-  selectedLanguagesAC
-} from "./language-reducer";
+  selectedLanguagesAC,
+} from './language-reducer';
 
 test('addLanguageAC добавляет выбранный язык в список выбранных языков', () => {
   const initialState = {
@@ -14,7 +14,7 @@ test('addLanguageAC добавляет выбранный язык в списо
     selectedLanguages: {},
   };
 
-  const selectedLang = LANGUAGES[0].id
+  const selectedLang = LANGUAGES[0].id;
   const action = addLanguageAC(selectedLang);
   const newState = languageReducer(initialState, action);
 

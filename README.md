@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Тестовое задание 
+Ссылка на [макет](https://www.figma.com/file/Ia59ht7XVNBetCIHniun2A/%D0%94%D1%80%D0%BE%D0%BF%D0%B4%D0%B0%D1%83%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%A2%D0%97-(Copy)?type=design&node-id=0-1&mode=design&t=B1VSVIHBqRJlROgf-0)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на [деплой](https://w1llow1sp.github.io/edstein-test-task/)
 
+![Как выглядит макет](http://g.recordit.co/5xk9HSxcHy.gif)
 ## Available Scripts
+
 
 In the project directory, you can run:
 

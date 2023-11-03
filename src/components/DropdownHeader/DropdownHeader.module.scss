@@ -15,10 +15,15 @@
     min-width: 400px;
     min-height: 40px;
     border-radius: 10px;
-    border: 1px solid var(--black-300, #C1C1C1);
-    background: var(--other-white, #FFF);
+    border: 1px solid var(--black-300, #c1c1c1);
+    background: var(--other-white, #fff);
     display: flex;
     flex-direction: row;
+
+    @media (min-width: 320px) and (max-width: 640px) {
+      min-width: 280px;
+      min-height: 40px;
+    }
   }
 
   &__leftContainer {
@@ -29,7 +34,6 @@
   }
 
   &__rightContainer {
-
     display: flex;
     justify-content: right;
     flex-grow: 1;
@@ -58,5 +62,4 @@
       transform: rotate(180deg);
     }
   }
-
 }

@@ -1,43 +1,56 @@
-import React, {ChangeEvent, useCallback} from 'react';
-import styles from './LanguageCard.module.scss'
-import Checkbox from "../../UI/Checkbox/Checkbox";
+import React, { ChangeEvent, useCallback , memo} from 'react';
+import styles from './LanguageCard.module.scss';
+import Checkbox from '../../UI/Checkbox/Checkbox';
+
+/**
+ * LanguageCard.tsx
+ *
+ * В этом файле содержится компонент React под названием LanguageCard.
+ * Он отображает карточку с информацией о языке, включая изображение, название языка и флажок для выбора.
+ * Также предоставляется функция обратного вызова для обработки изменений состояния чекбокса.
+ */
 export type LanguageCardPropsType = {
-    id: string,
-    picture: string
-    lang: string
-    isSelect: boolean
-    onChange:(ID: string, isSelect: boolean) => void
-}
+  id: string;
+  picture: string;
+  lang: string;
+  isSelect: boolean;
+  onChange: (ID: string, isSelect: boolean) => void;
+};
+/**
+ * Компонент LanguageCard
+ *
+ * @param lang - объект типа LanguageCardPropsType, содержащий информацию о языке
+ * @returns JSX-элемент, представляющий компонент LanguageCard
+ */
+export const LanguageCard = memo(({ id, picture, lang, isSelect, onChange }: LanguageCardPropsType) => {
+  /**
+   * Функция для обработки переключения чекбокса
+   *
+   * @param e - объект типа ChangeEvent<HTMLInputElement>, представляющий событие изменения флажка
+   */
+  const inputToggler = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    onChange(id, e.currentTarget.checked);
+  }, [id, onChange]);
 
-
-export const LanguageCard = React.memo((lang:LanguageCardPropsType) => {
-
-    const inputToggler = (e: ChangeEvent<HTMLInputElement>) => {
-        lang.onChange(lang.id, e.currentTarget.checked);
-    };
-
-    return (
-        <div className={styles.languageCardWrapper}>
-            <div key={lang.id} className={styles.languageCard}>
-                <div className={styles.languageCard__section}>
-                    <div className={styles.languageCard__section__img}>
-                        <img src={lang.picture} alt={lang.lang} />
-                    </div>
-                    <div className={styles.languageCard__section__info}>
-                        <label htmlFor={lang.id}>{lang.lang}</label>
-                    </div>
-                </div>
-
-                <Checkbox id={lang.id} checked={lang.isSelect} callback={inputToggler}/>
-
-{/*                <input
-                    className={styles.languageCard__checkbox}
-                    type="checkbox"
-                    checked={lang.isSelect}
-                    id={lang.id}
-                    onChange={inputToggler} />*/}
-            </div>
+  return (
+    <div className={styles.languageCardWrapper}>
+      <div key={id} className={styles.languageCard}>
+        <div className={styles.languageCard__section}>
+          <div className={styles.languageCard__section__img}>
+            <img src={picture} alt={lang} />
+          </div>
+          <div className={styles.languageCard__section__info}>
+            <label htmlFor={id}>{lang}</label>
+          </div>
         </div>
-    );
-})
 
+        <Checkbox
+          id={id}
+          checked={isSelect}
+          callback={inputToggler}
+        />
+
+      </div>
+    </div>
+  );
+});

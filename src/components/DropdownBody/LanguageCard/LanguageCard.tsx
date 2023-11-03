@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useCallback} from 'react';
 import styles from './LanguageCard.module.scss'
+import Checkbox from "../../UI/Checkbox/Checkbox";
 export type LanguageCardPropsType = {
     id: string,
     picture: string
@@ -16,21 +17,27 @@ export const LanguageCard = React.memo((lang:LanguageCardPropsType) => {
     };
 
     return (
-        <div key={lang.id} className={styles.container}>
-            <div className={styles.some}>
-                <img src={lang.picture} alt={lang.lang} />
-                <label htmlFor={lang.id}>{lang.lang}
-                </label>
-            </div>
-            <input
-                className={styles.checkbox}
-                type="checkbox"
-                checked={lang.isSelect}
-                id={lang.id}
-                onChange={inputToggler} />
+        <div className={styles.languageCardWrapper}>
+            <div key={lang.id} className={styles.languageCard}>
+                <div className={styles.languageCard__section}>
+                    <div className={styles.languageCard__section__img}>
+                        <img src={lang.picture} alt={lang.lang} />
+                    </div>
+                    <div className={styles.languageCard__section__info}>
+                        <label htmlFor={lang.id}>{lang.lang}</label>
+                    </div>
+                </div>
 
+                <Checkbox id={lang.id} checked={lang.isSelect} callback={inputToggler}/>
+
+{/*                <input
+                    className={styles.languageCard__checkbox}
+                    type="checkbox"
+                    checked={lang.isSelect}
+                    id={lang.id}
+                    onChange={inputToggler} />*/}
+            </div>
         </div>
     );
 })
-
 

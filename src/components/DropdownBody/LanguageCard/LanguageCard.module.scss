@@ -1,0 +1,22 @@
+.languageCardWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageCard {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #F4F4F4;
+  &__section {
+    display: flex;
+    &__img{
+
+    }
+    &__info{
+      margin-left: 8px;
+    }
+  }
+}
+

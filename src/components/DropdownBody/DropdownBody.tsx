@@ -68,7 +68,7 @@ export const DropdownBody = React.memo(function () {
             <div className={styles.searchBar}>
                 <input
                     className={styles.searchInput}
-                    type="text"
+                    type="search"
                     value={searchTerm}
                     onChange={handleSearchInputChange}
                     placeholder="Поиск"

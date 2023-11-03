@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/edstein-test-task/static/css/main.0889d87e.css",
+    "main.js": "/edstein-test-task/static/js/main.ca616011.js",
+    "index.html": "/edstein-test-task/index.html",
+    "static/media/search.svg": "/edstein-test-task/static/media/search.f4ddfbfdef3d68135217.svg",
+    "static/media/ARR.svg": "/edstein-test-task/static/media/ARR.7fe4f669e0fe6f89ee76.svg",
+    "main.0889d87e.css.map": "/edstein-test-task/static/css/main.0889d87e.css.map",
+    "main.ca616011.js.map": "/edstein-test-task/static/js/main.ca616011.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0889d87e.css",
+    "static/js/main.ca616011.js"
+  ]
+}
